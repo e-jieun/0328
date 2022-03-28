@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/class-setting.css">
+  <link rel="stylesheet" href="./css/variable.css">
+  <title>0328-mediaquery-ex-2</title>
+  <style>
+    /* mobile */
+    @media(min-width:450px) {
+      .root {
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    /* tablet */
+    @media(min-width:1080px) {
+      .root {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    /* pc */
+    @media(min-width:1920px) {
+      .root {
+        justify-content: center;
+        align-items: center;
+        /* PC버전에선 사라지도록 하기 */
+        background-color: var(--color-c4);
+        transition: 1s;
+      }
+
+      div,
+      p,
+      #next {
+        color: var(--color-c4);
+      }
+    }
+
+    .root {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+    }
+
+    .con {
+      width: 428px;
+      height: 926px;
+      /* border: 1px solid black; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .con div {
+      width: 90%;
+      height: 33%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* logo */
+    .con div:nth-child(1) {
+      justify-content: flex-end;
+      flex-direction: column;
+      height: 35%;
+    }
+
+    /* logo image */
+    .con div:nth-child(1)>div:nth-child(1) {
+      width: 150px;
+      height: 150px;
+      background-color: var(--color-c4);
+      border-radius: 100%;
+    }
+
+    .con div:nth-child(1)>div:nth-child(2) {
+      color: var(--color-c4);
+    }
+
+    /* login box */
+    .con div:nth-child(2) {
+      height: 35%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .con div:nth-child(2)>div {
+      width: 278px;
+      height: 71px;
+      background-color: var(--color-c4);
+      color: var(--color-fff);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .con div:nth-child(2)>div>p {
+      position: relative;
+      left: 20px;
+    }
+
+    /* next */
+    .con div:nth-child(3) {
+      align-items: flex-end;
+    }
+
+    .con div:nth-child(3)>div {
+      width: 75px;
+      height: 62px;
+      justify-content: center;
+      background-color: var(--color-c4);
+      color: var(--color-fff);
+      position: relative;
+      right: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="root">
+    <div class="con">
+      <!-- logo -->
+      <div class="flex">
+        <!-- logo image -->
+        <div></div>
+        <!-- logo text -->
+        <div>logo</div>
+      </div>
+      <!-- login box -->
+      <div>
+        <div>
+          <p>
+            ID
+          </p>
+        </div>
+        <div>
+          <p>
+            PASSWORD
+          </p>
+        </div>
+        <div>
+          <p>
+            NICKNAME
+          </p>
+        </div>
+      </div>
+      <!-- next -->
+      <div class="flex">
+        <div id="next" class="flex">Next></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
