@@ -6,35 +6,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/common.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/class-setting.css">
+  <title>0328-mediaquery-ex01</title>
   <style>
     /* mobile */
-    @media(min-width:450px){
-      .root{
+    @media(min-width:450px) {
+      .root {
         display: flex;
         align-items: center;
         justify-content: flex-start;
       }
     }
-    
+
     /* tablet */
-    @media(min-width:1028px){
-      .root{
+    @media(min-width:1028px) {
+      .root {
         display: flex;
         justify-content: center;
       }
     }
 
     /* pc */
-    @media(min-width:1920px){
-      .root{
+    @media(min-width:1920px) {
+      .root {
         display: flex;
         justify-content: center;
         align-items: center;
+        /* pc 버전에서 다크모드로 전환 */
         background-color: black;
         transition: 1s;
       }
-      
+
       .container {
         width: 428px;
         height: 926px;
@@ -42,8 +44,9 @@
         flex-direction: column;
         justify-content: space-around;
       }
+
     }
-    
+
     .root {
       width: 100vw;
       height: 100vh;
@@ -89,13 +92,14 @@
       background-color: gray;
       /* border: 1px solid #fff; */
     }
+
     .container>div:nth-child(2)>div:nth-child(1) {
       width: 150px;
       height: 10px;
     }
 
     /* footer */
-    #footer{
+    #footer {
       width: inherit;
       height: 200px;
       /* border: 1px solid #fff; */
@@ -104,25 +108,22 @@
       align-items: center;
       justify-content: space-between;
     }
-    
-    #footer>div:nth-child(1){
+
+    #footer>div:nth-child(1) {
       /* width: 10vw;
       height: 5vh; */
       width: 100px;
       height: 10px;
       background-color: gray;
     }
-    /* .container>div:nth-child(3)>div:nth-child(1)>div:nth-child(2) {
-      width: 15vw;
-      height: 5vw;
-    } */
-    #footer>div:nth-child(2){
+    
+    #footer>div:nth-child(2) {
       width: 200px;
       height: 50px;
       background-color: gray;
     }
 
-    #footer>div:nth-child(3){
+    #footer>div:nth-child(3) {
       width: 250px;
       height: 100px;
       background-color: gray;
