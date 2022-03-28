@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- !viewport!를 지우면 안 만들어짐, 반응형에서 중요
+  보이는 창을 감지하는 녀석을 사용하는 것이 일반적 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- reponsive layout: 가로폭에 반응해 ui를 대응시키는 것 -->
+<!-- 1. 파일 하나에 모든 스타일링이 가능하다
+2. 경우에 따라서 유지 보수가 힘들 수도 있음 => position을 많이 주면 힘들어짐, display를 사용하기
+3. 데이터량이 많아질 수 밖에 없음 => 이미지, 영상이 많을 때는 무거움 -->
+<!-- adaptive layout(적응형): 접속할 때 뷰포트를 확인해서 각각 만들어진 에리아웃 따로 전송
+=> 네이버
+웹 페이지(=반응형), 웹 사이트(=적응형)
+1. 스케일이 큰 사이트들이 선택 = 경량화
+2.  -->
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* basic(common) */
+  #root {
+    width: 100vw;
+    height: 100vh;
+    background-color: skyblue;
+    /*  */
+    transition: 1s;
+  }
+
+  #root>div{
+    width: 50vw;
+    height: 50vh;
+    background-color: #fff;
+  }
+
+  /* media query */
+  /* 가로폭 최대값: 1000px 이하로 갈 때 색이 바뀜 */
+  /* js 함수의 신택스와 동일 */
+  /* 반응형: 뷰포트 크기에 따라 달라짐 */
+
+  /* 모듈화 - 일반적으로 3개 정도 만든다
+  한 페이지에 너무 많은 스타일링이 필요
+  데이터가 많아짐 */
+  /* 모듈화, 추상화, 재할당 */
+  
+  /* @: at(에서) sign -> 지점을 표시하는 기호  */
+  /* 가로폭을 지정할 수 있음 */
+  /* https://developer.mozilla.org/ko/docs/Web/CSS/@media 
+  https://www.w3schools.com/cssref/css3_pr_mediaquery.asp */
+  /* 변별 기준을 지정할 수 있음
+  @media(속성: 값){값들을 재할당}
+  => 이런 방식으로 사용
+  pc, mobile, tablet, tv */
+
+  /* query: 질의(물어본다)
+  media query: 미디어를 물어본다
+ */
+  /* media 연습량이 필요
+  float: 10년 전 기술, 쓰지 않도록 하기
+  disp */
+
+  /* tablet */
+  @media (max-width:1028px) {
+
+    #root {
+      background-color: salmon;
+    }
+
+    #root>div{
+      width: 50vw;
+      height: 50vh;
+      background-color: black;
+    }
+  }
+
+  /* mobile */
+  @media (max-width:450px) {
+
+    #root {
+      background-color: teal;
+    }
+
+    #root>div{
+    width: 100vw;
+    height: 100vh;
+    background-color: chocolate;
+  }
+  }
+</style>
+
+<body>
+  <div id="root">
+    <div></div>
+  </div>
+</body>
+
+</html>
