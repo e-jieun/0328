@@ -1,0 +1,35 @@
+/* mobile */
+@media(min-width:450px){
+  .root{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+/* tablet */
+@media(min-width:1028px){
+  .root{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* pc */
+@media(min-width:1920px){
+  .root{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+  
+  .container {
+    width: 428px;
+    height: 926px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
